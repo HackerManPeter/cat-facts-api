@@ -10,3 +10,6 @@ services:
       - FULL_NAME=${FULL_NAME}
       - COOL_DOWN_TIME=${COOL_DOWN_TIME}
       - REQUEST_LIMIT=${REQUEST_LIMIT}
+
+    ports:
+      - "${PORT}:${PORT}"

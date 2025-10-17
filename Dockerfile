@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Expose the port on which the API will listen
-EXPOSE 3001
+EXPOSE 3000
 
 # Run the server when the container launches
 CMD ["bun", "start"]
