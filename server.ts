@@ -1,7 +1,7 @@
 import { catHandler, errorHandler, notFoundHandler } from "./handlers";
 import config from "./config";
 
-Bun.serve({
+const server = Bun.serve({
   port: config.port,
   routes: {
     "/me": {
@@ -12,4 +12,4 @@ Bun.serve({
   error: errorHandler,
 });
 
-console.log(`Server listening on port ${config.port} 🚀`);
+console.log(`Server listening @ ${server.url} 🚀`);

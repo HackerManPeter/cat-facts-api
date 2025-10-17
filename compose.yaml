@@ -3,7 +3,7 @@ services:
     build:
       context: .
     environment:
-      - PORT=3000
+      - PORT=${PORT}
       - CAT_API_BASE_URL=${CAT_API_BASE_URL}
       - FACT_LENGTH=${FACT_LENGTH}
       - EMAIL=${EMAIL}
@@ -11,4 +11,4 @@ services:
       - COOL_DOWN_TIME=${COOL_DOWN_TIME}
       - REQUEST_LIMIT=${REQUEST_LIMIT}
     ports:
-      - 3000:3000
+      - "${PORT}:${PORT}"
